@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather | Luc Cui</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&family=Varela&display=swap');
+
+        :root {
+            --border-size: 10px;
+            --bg-color: #3a3b3c;
+            --cards-bg-color: #58595a;
+            --text-color: #fff;
+        } 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-family: 'Spartan', sans-serif;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 500px;
+            background-color: var(--bg-color);
+            box-shadow: 5px 5px var(--text-color);
+            border-radius: var(--border-size);
+            display: flex;
+            color: var(--text-color); 
+        }
+        .weather {  
+            width: 30%; 
+            padding: 100px 0;
+        }
+        .round {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .weather .round img {
+            width: 80%;
+            height: 40%;
+        }
+        .city {
+            font-size: 3rem;
+        }
+        .status {
+            font-size: 1.5rem;
+        }
+        .tempurature {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        .helptext {
+            font-size: 1.5rem;
+        }
+        .cards {
+            flex: 1;
+            background-color: var(--cards-bg-color);
+            border-top-right-radius: var(--border-size);
+            border-bottom-right-radius: var(--border-size);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px; 
+        }
+        .card-header h3 {
+            font-size: 3rem;
+        }
+        .card-header input {
+            padding: 0 10px;
+            background-color: #3a3b3c;
+            color: var(--text-color);
+            border: 1px solid transparent;
+            border-radius: 5px;
+            font-weight: 300;
+        }
+        .card-body { 
+            padding: 10px;
+            display: flex;
+            flex-grow: 3;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card-body 
+        .card-item {
+            width: 30%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            background-color: var(--bg-color);
+            padding: 10px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin: 10px 5px;
+        }
+        .card-body 
+        .card-item
+        .card-img img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+        .card-body 
+        .card-item
+        .card-text {
+            flex:1;
+            text-align: right;
+        }
+        .card-body 
+        .card-item
+        .card-text h3 {
+            font-size: 3rem;
+        }
+        .card-body 
+        .card-item
+        .card-text span {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .author {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-weight: 500;
+            text-align: right;
+        }
+        .author span {
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="weather">
+            <div class="round">
+                <h2 class="city">Tra Vinh</h2>
+                <span class="status">nắng vãi</span>
+                <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png" alt="">
+                <div class="tempurature">34 &#8451; </div>
+                <div class="helptext">nắng gắt</div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-header">
+                <h3>Thứ 7, 11:00</h3>
+                <input type="text" placeholder="Nhập địa điểm">
+            </div>
+            <div class="card-body">
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/1247/1247140.svg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h4>Tốc độ gió</h4>
+                        <span>20</span>
+                        <p>km/h</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="https://image.flaticon.com/icons/png/512/5268/5268337.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h4>Độ ẩm</h4>
+                        <span>20</span>
+                        <p>%</p>
+                    </div>
+                </div> 
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="https://image.flaticon.com/icons/png/512/639/639347.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h4>Hướng gió</h4>
+                        <span>W</span> 
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="https://image.flaticon.com/icons/png/512/3579/3579149.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h4>Tầm nhìn</h4>
+                        <span>30</span>
+                        <p>km</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="https://image.flaticon.com/icons/png/512/1146/1146869.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h4>Mặt trời mọc</h4>
+                        <span>6:20</span>
+                        <p>AM</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="https://image.flaticon.com/icons/png/512/776/776533.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h4>Mặt trời lặn</h4>
+                        <span>7:07</span>
+                        <p>PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="author">
+                Coding With #LUCCUI <br/>
+                <span>https://github.com/luccui000</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
