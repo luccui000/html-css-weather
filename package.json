@@ -1,0 +1,22 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Xem thoi tiet",
+  "main": "script.js",
+  "scripts": {
+    "test": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luccui000/html-css-weather.git"
+  },
+  "author": "luccui <minhluc15.ok@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luccui000/html-css-weather/issues"
+  },
+  "homepage": "https://github.com/luccui000/html-css-weather#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
